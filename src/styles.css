@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import 'node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
+
+@font-face {
+  font-family: fair-Play;
+  src: url(../public/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+
+.font-regular{
+  font-family: fair-Play;
+  font-weight: 400;
+}
+.font-medium{
+  font-family: fair-Play;
+  font-weight: 500;
+}
+.font-semi-bold{
+  font-family: fair-Play;
+  font-weight: 600;
+}
+.font-bold{
+  font-family: fair-Play;
+  font-weight: 700;
+}
+.font-bolder{
+  font-family: fair-Play;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../public/Montserrat-VariableFont_wght.ttf);
+}
+
+.Montserrat-medium{
+  font-family: Montserrat;
+  font-weight: 400;
+}
+.Montserrat-normal{
+  font-family: Montserrat;
+  font-weight: 500;
+}
+.Montserrat-semi-bold{
+  font-family: Montserrat;
+  font-weight: 600;
+}
+.Montserrat-bold{
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
