@@ -54,7 +54,7 @@ h1 {
       rgba(36, 38, 39, 0.8),
       rgba(36, 38, 39, 0.8)
     ),
-    url("../assets/card1.jpg");
+    url("../../assets/card1.jpg");
 }
 
 .cardTwo .card {
@@ -62,7 +62,7 @@ h1 {
       rgba(36, 38, 39, 0.8),
       rgba(36, 38, 39, 0.8)
     ),
-    url("../assets/card2.jpg");
+    url("../../assets/card2.jpg");
 }
 
 .cardThree .card {
@@ -70,7 +70,7 @@ h1 {
       rgba(36, 38, 39, 0.8),
       rgba(36, 38, 39, 0.8)
     ),
-    url("../assets/card3.jpg");
+    url("../../assets/card3.jpg");
 }
 
 .card-body {
