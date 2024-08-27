@@ -1,0 +1,150 @@
+.bg {
+  padding: 2rem;
+  background-color: white;
+}
+
+.font-regular {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #0262b0
+  ;
+  margin-bottom: 1rem;
+}
+
+.d-flex {
+  gap: 1rem; /* Adds space between cards */
+}
+
+.card {
+  width: 20rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
+  text-align: center;
+  padding: 1rem;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Ensures text is readable over the image */
+  position: relative; /* Required for gradient overlay */
+  overflow: hidden; /* Hides overflow to make sure the gradient stays within the card */
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lifts the card slightly on hover */
+  box-shadow: 0 8px 20px rgba(184, 155, 94, 0.8); /* Adds glow effect on hover */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 38, 39, 0.2); /* 80% opacity */
+  z-index: 1; /* Ensures the overlay is above the image but below the text */
+}
+
+.cardOne .card {
+  background-image: linear-gradient(
+      rgba(36, 38, 39, 0.8),
+      rgba(36, 38, 39, 0.8)
+    ),
+    url("../../assets/card1.jpg");
+}
+
+.cardTwo .card {
+  background-image: linear-gradient(
+      rgba(36, 38, 39, 0.8),
+      rgba(36, 38, 39, 0.8)
+    ),
+    url("../../assets/card2.jpg");
+}
+
+.cardThree .card {
+  background-image: linear-gradient(
+      rgba(36, 38, 39, 0.8),
+      rgba(36, 38, 39, 0.8)
+    ),
+    url("../../assets/card3.jpg");
+}
+
+.card-body {
+  position: relative; /* Keeps content above the gradient */
+  z-index: 2; /* Ensures the text is above the gradient overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.card i {
+  color: white
+  ;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.card-text {
+  margin-top: 0.5rem;
+}
+
+/* Flexbox to create square cards */
+.cardOne, .cardTwo, .cardThree {
+  flex: 1 1 30%;
+  max-width: 30%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .cardOne, .cardTwo, .cardThree {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+/* home-cards.component.css */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-play-state: paused; /* Pause the animation until the card is in view */
+}
+
+.animate {
+  animation-play-state: running; /* Start the animation */
+}

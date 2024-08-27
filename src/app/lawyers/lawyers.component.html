@@ -1,0 +1,64 @@
+<div class="heading-bg">
+  <h1 class="py-5 font-regular text-center">Meet Our Team</h1>
+</div>
+<div class="bg p-3">
+  <div class="row row-cols-1 row-cols-md-3 g-0 p-5 mb-0 mt-0">
+    <div
+      *ngFor="let lawyer of lawyers"
+      class="col d-flex justify-content-center mb-5 pb-5"
+    >
+      <div *ngIf="timerFlag === false" class="card" aria-hidden="true" style="height: 20rem;">
+        <div class="card-body">
+          <h5 class="card-title placeholder-glow">
+            <span class="placeholder col-6"></span>
+          </h5>
+          <p class="card-text placeholder-glow">
+            <span class="placeholder col-7"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-4"></span>
+            <span class="placeholder col-6"></span>
+            <span class="placeholder col-8"></span>
+            <span class="placeholder col-8"></span>
+          </p>
+        </div>
+      </div>
+      <div *ngIf="timerFlag === true" class="card font-regular" (mouseover)="toggleCard($event)" (mouseout)="toggleCard($event)">
+        <img [src]="lawyer.image" alt="{{ lawyer.name }}" class="img-fluid" />
+        <div class="card-body text-center">
+          <h5 class="card-title text-white">{{ lawyer.name }}</h5>
+          <p class="card-text">-{{ lawyer.designation }}-</p>
+          <div class="social-icons text-center">
+            <a
+              *ngIf="lawyer.instagram"
+              [href]="lawyer.instagram"
+              target="_blank"
+              class="me-2 text-white"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              *ngIf="lawyer.facebook"
+              [href]="lawyer.facebook"
+              target="_blank"
+              class="me-2 text-white"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              *ngIf="lawyer.linkedin"
+              [href]="lawyer.linkedin"
+              target="_blank"
+              class="me-2 text-white"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hidden-box">
+          <h1 class="font-regular fs-1">ABOUT</h1>
+          <p class="font-normal text-center">{{ lawyer.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+.bg-card {
+  --s: 25vmin;
+  --p: calc(var(--s) / 2);
+  --c1: #0262b0;
+  --c2: white;
+  --c3: #181d21;
+  --bg: var(--c3);
+  --d: 18000ms;
+  --e: cubic-bezier(0.76, 0, 0.24, 1);
+
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+  background-size: var(--s) var(--s);
+  background-position:
+    calc(var(--p) *  1) calc(var(--p) *  0),
+    calc(var(--p) * -1) calc(var(--p) *  1),
+    calc(var(--p) *  1) calc(var(--p) * -1),
+    calc(var(--p) * -1) calc(var(--p) *  0);
+  animation:
+    color var(--d) var(--e) infinite,
+    position var(--d) var(--e) infinite;
+}
+
+.bg {
+  background-image: url("../../../src/assets/photorealistic-law-environment.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%; /* Adjust width for responsiveness */
+  height: 30rem;
+}
+
+.firm {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.description {
+  background-color: #0262b0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #0262b0;
+}
+
+.heading-bg {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.heading-bg.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content {
+  padding: 2rem 1rem;
+}
+
+.card {
+  background-color: #181d21;
+  border: 5px solid #0262b0;
+}
+
+.card-body {
+  padding: 2rem;
+  height: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #0262b0;
+}
+
+@media (max-width: 768px) {
+  .p-5 {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .firm {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+}
