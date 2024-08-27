@@ -10,7 +10,7 @@ import { take } from 'rxjs/operators';
 export class LawyersComponent implements OnInit {
   public lawyers = [
     {
-      image: '/assets/wajahat_ali.jpg',
+      image: 'assets/wajahat_ali.jpg',
       name: 'Wajahat Ali',
       designation: 'Advocate High Court',
       instagram: 'https://instagram.com/lawyer1',
@@ -20,7 +20,7 @@ export class LawyersComponent implements OnInit {
         'Wajahat Ali obtained his law degree in 2009 and initially worked with leading law offices of the country. Wajahat represents and advises clients in a range of contentious and non-contentious matters. In 2019, he played a major role in successfully defending legislation relating to validation of actions undertaken by Punjab Revenue Authority; the case involved revenue of billions of rupees for the provincial government.'
     },
     {
-      image: '/assets/ali_raza.jpg',
+      image: 'assets/ali_raza.jpg',
       name: 'S. Ali Raza Shah',
       designation: 'Advocate High Court',
       instagram: 'https://instagram.com/lawyer2',
@@ -30,7 +30,7 @@ export class LawyersComponent implements OnInit {
         'primarily in the areas of criminal justice system; urban planning and development; youth and sports; public private partnership prospects; and environment and wildlife. In recognition of his successful legal reforms work in the Punjab Solicitor’s Department, UNDP selected him to represent Pakistan in Young Leaders in Governance Program at Bangkok, Thailand.',
     },
     {
-      image: '/assets/malik-nousherwan.jpeg',
+      image: 'assets/malik-nousherwan.jpeg',
       name: 'Malik Nousherwan Awan',
       designation: 'Advocate High Court',
       instagram: 'https://instagram.com/lawyer2',
