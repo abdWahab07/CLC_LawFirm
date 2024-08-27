@@ -12,6 +12,7 @@ import { NewsComponent } from './news/news.component';
 import { FirmComponent } from './firm/firm.component';
 import { LawyersComponent } from './lawyers/lawyers.component';
 import { PracticeAreasComponent } from './practice-areas/practice-areas.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PracticeAreasComponent } from './practice-areas/practice-areas.componen
     NewsComponent,
     FirmComponent,
     LawyersComponent,
-    PracticeAreasComponent
+    PracticeAreasComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
