@@ -11,6 +11,7 @@ import { TestimonyComponent } from './testimony/testimony.component';
 import { NewsComponent } from './news/news.component';
 import { FirmComponent } from './firm/firm.component';
 import { LawyersComponent } from './lawyers/lawyers.component';
+import { PracticeAreasComponent } from './practice-areas/practice-areas.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LawyersComponent } from './lawyers/lawyers.component';
     TestimonyComponent,
     NewsComponent,
     FirmComponent,
-    LawyersComponent
+    LawyersComponent,
+    PracticeAreasComponent
   ],
   imports: [
     BrowserModule,
