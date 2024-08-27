@@ -1,0 +1,33 @@
+<div class="description">
+  <div class="heading-bg">
+    <div class="heading">
+      <h1 class="py-5 font-regular text-white text-center">News Updates</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container p-5">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let meeting of meetings">
+      <div class="card card-margin">
+        <div class="card-body pt-0">
+          <div class="widget-49">
+            <div class="widget-49-title-wrapper p-3">
+              <div [ngClass]="meeting.dateClass">
+                <span class="widget-49-date-day">{{ meeting.day }}</span>
+                <span class="widget-49-date-month">{{ meeting.month }}</span>
+              </div>
+              <div class="widget-49-meeting-info">
+                <span class="widget-49-pro-title">{{ meeting.title }}</span>
+                <span class="widget-49-meeting-time"><br>{{ meeting.time }}</span>
+              </div>
+            </div>
+            <p class="widget-49-meeting-description p-3">
+              {{ meeting.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
