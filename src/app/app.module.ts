@@ -10,6 +10,7 @@ import { HomeCardsComponent } from './home-cards/home-cards.component';
 import { TestimonyComponent } from './testimony/testimony.component';
 import { NewsComponent } from './news/news.component';
 import { FirmComponent } from './firm/firm.component';
+import { LawyersComponent } from './lawyers/lawyers.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FirmComponent } from './firm/firm.component';
     HomeCardsComponent,
     TestimonyComponent,
     NewsComponent,
-    FirmComponent
+    FirmComponent,
+    LawyersComponent
   ],
   imports: [
     BrowserModule,
