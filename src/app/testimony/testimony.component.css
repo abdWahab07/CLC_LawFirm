@@ -1,0 +1,168 @@
+/* Background styling */
+.bg {
+  background-image: url("../assets/Testimony.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2rem;
+}
+
+/* Heading styling */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  color: #0262b0;
+}
+
+/* Slideshow container styling */
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+/* Slide text styling */
+.slide-text {
+  position: relative;
+  z-index: 2;
+  word-wrap: break-word;
+}
+
+/* Individual slide styling */
+.slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  font-size: 25px;
+  color: grey;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Show active slide */
+.active {
+  display: block;
+}
+
+/* Arrow Styles */
+.arrow {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Logo container styling */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/* Logo styling */
+.logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: containr;
+  width: 200px;
+}
+
+/* Slideshow animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Wrapper for logos to enable animation */
+.logo-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%; /* Full width of the container */
+  animation: slide 20s linear infinite; /* Animation over 20 seconds */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bg {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .slideshow-container {
+    padding: 1rem;
+  }
+
+  .slide{
+    font-size: 15px;
+  }
+
+  .logo-wrapper {
+    animation-duration: 25s;
+  }
+
+  .logo {
+    width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .slideshow-container {
+    padding: 0.5rem;
+  }
+
+
+  .slide{
+    font-size: 13px;
+  }
+
+  .logo-wrapper {
+    animation-duration: 30s;
+  }
+
+  .logo {
+    width: 550px;
+  }
+}

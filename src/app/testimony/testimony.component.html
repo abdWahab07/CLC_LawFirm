@@ -1,0 +1,27 @@
+
+<div class="bg">
+  <h1 class="font-regular mt-5">Our Clients</h1>
+
+  <!-- Text Slideshow -->
+  <div class="slideshow-container mt-5">
+    <div class="slide"
+         *ngFor="let slide of slides; let i = index"
+         [style.display]="i === currentIndex ? 'block' : 'none'"
+         [style.opacity]="i === currentIndex ? 1 : 0.5">
+      <div class="slide-text">
+        <p class="font-regular">{{ slide.text }}</p>
+      </div>
+    </div>
+    <a class="arrow prev" (click)="prevSlide()">&#10094;</a>
+    <a class="arrow next" (click)="nextSlide()">&#10095;</a>
+  </div>
+
+  <!-- Logo Slideshow -->
+  <div class="d-flex justify-content-center align-items-center mt-5">
+    <div class="logo-wrapper">
+      <div class="logo-container" *ngFor="let logo of logos">
+        <img [src]="logo.src" [alt]="logo.alt" class="logo me-5">
+      </div>
+    </div>
+  </div>
+</div>
