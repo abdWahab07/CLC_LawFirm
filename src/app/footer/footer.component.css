@@ -1,0 +1,153 @@
+.bg {
+  background-color: white;
+}
+
+.footer-header {
+  padding: 5rem;
+  margin-right: 10rem;
+  margin-left: 10rem;
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.bg-header {
+  background-color: #0262b0;
+}
+
+/* Button Hover Animation */
+@keyframes buttonHover {
+  0% {
+    background-color: #b89b5e;
+    color: white;
+  }
+  100% {
+    background-color: white;
+    color: #b89b5e;
+  }
+}
+
+button {
+  padding: 1rem 5rem;
+  border: none;
+  background-color: white;
+  color: #0262b0;
+  cursor: pointer;
+  transition: background-color 1s ease, color 0.3s ease;
+  animation: fadeIn 2s;
+  border-radius: 0;
+}
+
+button:hover {
+  animation: buttonHover 1s forwards;
+}
+
+.input {
+  border: solid 3rem;
+}
+
+.bg {
+  background-color: white;
+  padding: 2rem;
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-hr {
+  border: 3px solid #b89b5e;
+  width: 50px;
+  margin: 0 0 1rem 0.8rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+
+  .footer-logo {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-logo {
+    max-width: 100px;
+  }
+
+  .footer-hr {
+    width: 40px;
+  }
+
+  .bg{
+    text-align: center;
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-header, .footer {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .footer .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .me-5 {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .footer .p-2 img {
+    max-width: 80%;
+  }
+
+  .footer .text-center {
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem;
+  }
+}

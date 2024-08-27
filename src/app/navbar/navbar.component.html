@@ -1,1 +1,85 @@
-<p>navbar works!</p>
+<div class="bg">
+  <div class="d-flex justify-content-between align-items-center social pt-3">
+    <div>
+      <a
+        href="tel:+123456789"
+        class="me-3 text-white text-decoration-none text-white"
+      >
+        <i class="fas fa-phone"></i> +123 456 789
+      </a>
+      <a
+        href="mailto:info@company.com"
+        class="text-white text-decoration-none text-white"
+      >
+        <i class="fas fa-envelope"></i> infocompany.com
+      </a>
+    </div>
+    <div>
+      <a
+        href="https://facebook.com"
+        target="_blank"
+        class="me-3 text-white text-decoration-none text-white"
+      >
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a
+        href="https://twitter.com"
+        target="_blank"
+        class="me-3 text-white text-decoration-none text-white"
+      >
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a
+        href="https://instagram.com"
+        target="_blank"
+        class="me-3 text-white text-decoration-none text-white"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <button class="button Montserrat-bold mb-2">READ MORE</button>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark Montserrat-bold">
+    <a class="navbar-brand" href="#">
+      <img [src]="logo" alt="" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white text-uppercase" href="/home">HOME</a>
+          <hr class="nav-divider" />
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/the-firm">THE FIRM</a>
+          <hr class="nav-divider" />
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/lawyers">LAWYERS</a>
+          <hr class="nav-divider" />
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/practice-areas"
+            >PRACTICE AREAS</a
+          >
+          <hr class="nav-divider" />
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="/contact-us">CONTACT US</a>
+          <hr class="nav-divider" />
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
