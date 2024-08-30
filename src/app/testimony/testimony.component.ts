@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HostListener } from '@angular/core';
 
 
 @Component({
@@ -41,5 +42,24 @@ export class TestimonyComponent implements OnInit {
 
   nextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+  }
+
+  public revealedSections = new Set<number>();
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.checkScroll();
+  }
+
+  private checkScroll(): void {
+    const elements = document.querySelectorAll('.heading-bg');
+    const windowHeight = window.innerHeight;
+
+    elements.forEach((element: any) => {
+      const positionFromTop = element.getBoundingClientRect().top;
+      if (positionFromTop - windowHeight <= 0) {
+        element.classList.add('fade-in');
+      }
+    });
   }
 }

@@ -17,12 +17,14 @@
 </div>
 
 <div class="content row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 bg-card">
-  <div *ngFor="let area of about" class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <h2 class="font-regular text-center card-title">{{ area.heading }}</h2>
-        <p class="card-text text-white text-center">{{ area.content }}</p>
-      </div>
-    </div>
+<div *ngFor="let index of about" class="card">
+  <div class="content">
+    <p class="heading">{{index.heading}}</p>
+    <p class="para">
+      {{index.content}}
+    </p>
+    <!-- <p class="para para-sm">Jan 1, 2024</p> -->
   </div>
+</div>
+
 </div>

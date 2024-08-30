@@ -6,11 +6,11 @@
   </div>
 </div>
 
-<div class="container p-5">
+<div class="container-news p-5">
   <div class="row">
     <div class="col-lg-4" *ngFor="let meeting of meetings">
-      <div class="card card-margin">
-        <div class="card-body pt-0">
+      <div class="card-news card-margin">
+        <div class="card-body-news pt-0">
           <div class="widget-49">
             <div class="widget-49-title-wrapper p-3">
               <div [ngClass]="meeting.dateClass">
@@ -31,3 +31,33 @@
     </div>
   </div>
 </div>
+
+<!-- Weather Card -->
+ <div class="p-5">
+<div class="card">
+  <div class="container">
+    <div class="cloud front">
+      <span class="left-front"></span>
+      <span class="right-front"></span>
+    </div>
+    <span class="sun sunshine"></span>
+    <span class="sun"></span>
+    <div class="cloud back">
+      <span class="left-back"></span>
+      <span class="right-back"></span>
+    </div>
+  </div>
+
+  <div class="card-header">
+    <span class="text-left">{{ weather?.location }}</span>
+    <span class="text-left">{{ weather?.date }}</span>
+  </div>
+
+  <span class="temp">{{ weather?.temperature }}°</span>
+
+  <div class="temp-scale">
+    <span>Celcius</span>
+  </div>
+</div>
+</div>
+

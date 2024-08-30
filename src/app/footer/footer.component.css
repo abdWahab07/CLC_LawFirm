@@ -19,32 +19,58 @@
   background-color: #0262b0;
 }
 
-/* Button Hover Animation */
-@keyframes buttonHover {
-  0% {
-    background-color: #b89b5e;
-    color: white;
-  }
-  100% {
-    background-color: white;
-    color: #b89b5e;
-  }
+/* From Uiverse.io by cssbuttons-io */
+button {
+  --color: white;
+  font-family: inherit;
+  background-color: #0262b0;
+  display: inline-block;
+  width: 10em;
+  height: 3.6em;
+  line-height: 2.5em;
+  margin: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 2px solid var(--color);
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
 }
 
-button {
-  padding: 1rem 5rem;
-  border: none;
-  background-color: white;
-  color: #0262b0;
-  cursor: pointer;
-  transition: background-color 1s ease, color 0.3s ease;
-  animation: fadeIn 2s;
-  border-radius: 0;
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
 }
 
 button:hover {
-  animation: buttonHover 1s forwards;
+  color: #0262b0;
 }
+
+button:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+button:active:before {
+  background: #3a0ca3;
+  transition: background 0s;
+}
+
 
 .input {
   border: solid 3rem;

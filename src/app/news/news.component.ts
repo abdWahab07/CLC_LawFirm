@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.css']
 })
-export class NewsComponent {
+export class NewsComponent implements OnInit {
   meetings = [
     {
       day: '05',
@@ -35,4 +36,26 @@ export class NewsComponent {
       buttonClass: 'btn-flash-border-danger'
     }
   ];
+
+  weather: any;
+
+  private apiKey = '018bb3b6a7124ee7a40234221242908';
+  private location = 'lahore';  // You can change this to any location
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.getWeather();
+  }
+
+  getWeather() {
+    const url = `https://api.weatherapi.com/v1/current.json?key=${this.apiKey}&q=${this.location}`;
+    this.http.get(url).subscribe((data: any) => {
+      this.weather = {
+        location: `${data.location.name}, ${data.location.region} - ${data.location.country}`,
+        date: `${data.location.localtime.split(' ')[0]}`,
+        temperature: data.current.temp_c
+      };
+    });
+  }
 }

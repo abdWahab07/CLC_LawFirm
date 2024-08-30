@@ -53,7 +53,7 @@ h1 {
   width: 100%;
   min-height: 200px;
   height: auto;
-  font-size: 25px;
+  font-size: 23px;
   color: grey;
   font-weight: 600;
   font-style: italic;
@@ -108,7 +108,7 @@ h1 {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  width: 200px;
+  width: 150px;
 }
 
 /* Slideshow animation */

@@ -1,6 +1,6 @@
 .bg {
   background-size: 350% 350%;
-background-image: linear-gradient(1deg, white 0%, white 25%, #0262b0 51%, #0262b0 100%);
+background-image: linear-gradient(0.5deg, white 0%, white 25%, #0262b0 51%, #0262b0 100%);
   -webkit-animation: AnimateBG 7s ease infinite;
           animation: AnimateBG 7s ease infinite;
 }
@@ -29,19 +29,24 @@ background-image: linear-gradient(1deg, white 0%, white 25%, #0262b0 51%, #0262b
   }
 }
 
+.navbar-brand img {
+  width: 170px; /* Adjust width to your desired size */
+  height: auto; /* Keeps aspect ratio intact */
+}
+
 .navbar {
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-left: 5rem;
   margin-right: 5rem;
-  font-size: large;
+  font-size: 0.9rem;
   animation: fadeIn 3s ease-in-out forwards;
 }
 
 .social {
   margin-left: 5rem;
   margin-right: 5rem;
+  font-size: 0.9rem;
   animation: slideDown 1s ease-in-out forwards;
-
 }
 
 /* Button Hover Animation */
@@ -84,7 +89,7 @@ li :active{
 }
 
 .nav-divider {
-  border: 3px solid black;
+  border: 3px solid #0262b0;
   width: 20px;
   margin: 0 0 1rem 0.5rem;
   border-radius: 2px;

@@ -1,30 +1,6 @@
-.bg-card {
-  --s: 25vmin;
-  --p: calc(var(--s) / 2);
-  --c1: #0262b0;
-  --c2: white;
-  --c3: #181d21;
-  --bg: var(--c3);
-  --d: 18000ms;
-  --e: cubic-bezier(0.76, 0, 0.24, 1);
-
-  background-color: var(--bg);
-  background-image:
-    linear-gradient(45deg, var(--c1) 25%, transparent 25%),
-    linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, var(--c2) 75%),
-    linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
-  background-size: var(--s) var(--s);
-  background-position:
-    calc(var(--p) *  1) calc(var(--p) *  0),
-    calc(var(--p) * -1) calc(var(--p) *  1),
-    calc(var(--p) *  1) calc(var(--p) * -1),
-    calc(var(--p) * -1) calc(var(--p) *  0);
-  animation:
-    color var(--d) var(--e) infinite,
-    position var(--d) var(--e) infinite;
+.bg-card{
+  background-color: whitesmoke;
 }
-
 .bg {
   background-image: url("../../../src/assets/photorealistic-law-environment.jpg");
   background-size: cover;
@@ -62,37 +38,65 @@ h1 {
   transform: translateY(0);
 }
 
-.content {
-  padding: 2rem 1rem;
-}
-
+/* From Uiverse.io by gharsh11032000 */
 .card {
-  background-color: #181d21;
-  border: 5px solid #0262b0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 24px;
+  line-height: 1.6;
+  transition: all 0.64s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-.card-body {
-  padding: 2rem;
-  height: auto;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 36px;
+  border-radius: 24px;
+  background: transparent;
+  color: #000000;
+  z-index: 1;
+  transition: all 0.64s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-h2 {
-  font-size: 1.5rem;
-  color: #0262b0;
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: #0a3cff; */
+  background-color: #0262b0;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: skew(-24deg);
+  clip-path: circle(0% at 50% 50%);
+  transition: all 0.64s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
-@media (max-width: 768px) {
-  .p-5 {
-    padding: 2rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .card-body {
-    padding: 1.5rem;
-  }
+.content .heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.3;
+  z-index: 1;
+}
+.content .para {
+  z-index: 1;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.content .para-sm {
+  font-size: 16px;
+}
+.card:hover::before {
+  opacity: 1;
+  transform: skew(0deg);
+  clip-path: circle(140.9% at 0 0);
+}
+.card:hover .content {
+  color: #ffffff;
 }
 
 @media (max-width: 576px) {

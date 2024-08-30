@@ -13,6 +13,9 @@ import { FirmComponent } from './firm/firm.component';
 import { LawyersComponent } from './lawyers/lawyers.component';
 import { PracticeAreasComponent } from './practice-areas/practice-areas.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomeComponent } from './home/home.component';
+import { WeatherService } from './services/weather.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,14 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     LawyersComponent,
     PracticeAreasComponent,
     ContactUsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
