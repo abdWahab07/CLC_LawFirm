@@ -7,7 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 
 export class ContactUsComponent {
-  clc = "assets/cls.jpeg"
+  clc = "/assets/cls.jpeg"
   public revealedSections = new Set<number>();
 
   @HostListener('window:scroll', [])
