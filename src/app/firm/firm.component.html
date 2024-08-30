@@ -28,12 +28,13 @@
 </div>
 
 <div class="section p-5">
-  <div *ngFor="let index of about" class="d-flex text-center overview justify-content-between align-items-center mb-5">
-    <div class="width about-heading">
-      <h1 class="about-h font-regular fs-1">{{ index.heading }}</h1>
-    </div>
-    <div class="width">
-      <p class="text-left font-normal">{{ index.content }}</p>
+  <div *ngFor="let index of about" class="card-container d-flex justify-content-center mb-5">
+    <div class="card">
+      <div class="card-content">
+        <h1 class="font-regular fs-1">{{ index.heading }}</h1>
+        <p class="text-left font-normal">{{ index.content }}</p>
+      </div>
     </div>
   </div>
 </div>
+
